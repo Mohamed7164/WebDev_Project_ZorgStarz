@@ -1,112 +1,117 @@
 <!--
-     Author: Adam Halfaoui
-     Due Date: 09/10/2025
-     progect: (AniVerse Contact page)
+  Author: Mohamed Ibrahim
+  Co-editor: Adam Halfaoui
+  Due Date: 09/10/2025
+  Project: AniVerse Contact Page
 -->
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Contact Info - AniVerse</title>
+    <title>Contact AniVerse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       body {
-        font-family: 'Arial', sans-serif;
+        font-family: Arial, sans-serif;
         background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
         margin: 0;
         padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
 
-      header {
+      .form-box {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgb(0,0,0,0.2);
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .form-box h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+      .InfoPage {
+        position:fixed;
+        bottom:0;
+        
+        width:100%;
         background-color: #333;
         color: white;
-        padding: 15px 20px;
         text-align: center;
-        font-size: 24px;
+        padding: 20px;
+        font-size: 20px;
+        margin-top: 60px;
+      }
+
+      .InfoPage a {
+        color: #ff9a9e;
+        text-decoration: none;
+        margin: 0 15px;
+        text-align:center;
+      }
+
+      label {
+        display: block;
+        margin: 10px 0 5px;
         font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-      }
-
-      .container {
-        margin: 40px auto;
-        padding: 30px;
-        max-width: 800px;
-        background: #ffffff;
-        border-radius: 15px;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        text-align: center;
-      }
-
-      h1 {
-        color: #333;
-        font-size: 28px;
-        margin-bottom: 20px;
-      }
-
-      p {
-        font-size: 18px;
-        line-height: 1.8;
         color: #555;
       }
 
-      .contact-methods {
-        margin-top: 30px;
-      }
-
-      .contact-methods p {
-        margin: 15px 0;
-        font-size: 18px;
-        color: #444;
-      }
-
-      .contact-methods a {
-        color: #007BFF;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      .contact-methods a:hover {
-        text-decoration: underline;
-      }
-
-      footer {
-        text-align: center;
-        padding: 15px;
-        background-color: #333;
-        color: white;
-        position: fixed;
-        bottom: 0;
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
         width: 100%;
-        font-size: 14px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
       }
 
-      footer a {
-        color: #ff9a9e;
-        text-decoration: none;
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #ff9a9e;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
       }
 
-      footer a:hover {
-        text-decoration: underline;
+      input[type="submit"]:hover {
+        background-color: #f77a8a;
       }
     </style>
   </head>
   <body>
-    <header>
-      AniVerse
-    </header>
-
-    <div class="container">
-      <h1>Contact Us</h1>
-      <p>If you have any questions, feedback, or inquiries, feel free to reach out to us using the contact details below:</p>
-
-      <div class="contact-methods">
-        <p><strong>Email:</strong> <a href="mailto:support@aniverse.com">support@aniverse.com</a></p>
-        <p><strong>Phone:</strong> +353 456-7890</p>
-        <p><strong>Address:</strong> 123 AniVerse Lane, Anime City, Dublin 100</p>
-      </div>
+    <div class="InfoPage">
+      <a href="Index.html">Home</a>
+      <a href="About.html">About</a>
     </div>
 
-    <footer>
-      <p>&copy; 2025 AniVerse. All rights reserved. | <a href="Index.html">Back to Home</a></p>
-    </footer>
+
+    <div class="form-box">
+      <form action="submit_contact.php" method="post">
+        <h2>Contact AniVerse</h2>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
   </body>
 </html>
