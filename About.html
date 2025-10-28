@@ -1,7 +1,7 @@
 <!--
      Author: Wassim Zeroug
      Due Date: 09/10/2025
-     project: (AniVerse about page)
+     progect: (AniVerse about page)
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -11,17 +11,50 @@
     <title>AniVerse - About Us</title>
 
     <style>
-        body {
+        .InfoPage {
+        position:absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      .InfoPage a {
+        color: #ff9a9e;
+        text-decoration: none;
+        margin: 0 15px;
+        text-align:center;
+      }
+       html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+      }
+
+        html, body {
             background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
             font-family: Arial;
             color: black; /* Text color */
             text-align: center; /* Centers all text */
             margin: 0; /* Removes default page margins */
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
         }
+       
         header, footer {
             
             padding: 15px; /* Adds space inside the boxes */
         }
+
         main {
             background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
             margin: 20px; /* Adds space around the main box */
@@ -31,6 +64,7 @@
         h2 {
             color: rgb(51, 80, 226);
         }
+
     </style>
 </head>
 <body>
@@ -60,11 +94,12 @@
 
         <h2>Accessibility</h2>
         <p>We include font, color so everyone can use AniVerse easily.</p>
-        <a href="Index.html">Go Back To Homepage</a>
+        
     </main>
-    <footer>
-        <p> 2025 AniVerse.</p>
-    </footer>
+    <div class="InfoPage">
+      <a href="Index.html">Home</a>
+      <a href="Contact.html">Contact</a>
+    </div>
 
 </body>
 </html>
